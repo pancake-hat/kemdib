@@ -1,59 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Click Counter</title>
-    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js"></script>
-    <style>
-        body { font-family: Arial, sans-serif; }
-        #clickCounter { font-size: 2rem; margin: 20px; }
-        button { padding: 10px 20px; font-size: 1rem; }
-    </style>
+    <title>Kemdib</title>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-    <h1>Global Click Counter</h1>
-    <div id="clickCounter">0</div>
-    <button id="incrementButton">Click Me!</button>
+    <h1>Total Clicks</h1>
+    <p>Total Clicks: <span id="click-count">Loading...</span></p>
+    <button id="click-button">Click Me!</button>
 
-    <script>
-        // Your web app's Firebase configuration
-        const firebaseConfig = {
-            apiKey: "YOUR_API_KEY",
-            authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-            databaseURL: "https://YOUR_PROJECT_ID.firebaseio.com",
-            projectId: "YOUR_PROJECT_ID",
-            storageBucket: "YOUR_PROJECT_ID.appspot.com",
-            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-            appId: "YOUR_APP_ID"
-        };
-
-        // Initialize Firebase
-        const app = firebase.initializeApp(firebaseConfig);
-        const database = firebase.database();
-
-        const clickCounterElement = document.getElementById('clickCounter');
-        const incrementButton = document.getElementById('incrementButton');
-
-        // Function to update click count in Firebase
-        function updateClickCount() {
-            database.ref('clicks').transaction(count => (count || 0) + 1);
-        }
-
-        // Function to get the click count from Firebase
-        function getClickCount() {
-            database.ref('clicks').on('value', (snapshot) => {
-                clickCounterElement.innerText = snapshot.val() || 0;
-            });
-        }
-
-        incrementButton.addEventListener('click', () => {
-            updateClickCount();
-        });
-
-        // Fetch the initial click count
-        getClickCount();
-    </script>
+    <script type="module" src="scripts/firebase_database.js"></script>
 </body>
 </html>
