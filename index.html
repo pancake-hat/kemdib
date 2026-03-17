@@ -1,16 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Kemdib</title>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
-    <link rel="stylesheet" href="styles/styles.css">
-</head>
-<body>
-    <h1>Total Clicks</h1>
-    <p>Total Clicks: <span id="click-count">Loading...</span></p>
-    <button id="click-button">Click Me!</button>
 
-    <script type="module" src="scripts/firebase_database.js"></script>
+<head>
+    <title>KemdiBets</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+
+<body>
+
+<h1>KemdiBets Cube Slots</h1>
+
+<div id="slot-display-counter">
+    <div id="slot-overlay"></div>
+    <div id="slot-overlay-line"></div>
+    <div id="slot-total-clicks">total rolls</div>
+    <div id="slot-zeros">00000000000</div>
+</div>
+
+<div id="slots">
+    <div class="reel" id="holder1">
+        <div id="bag1"></div>
+    </div>
+
+    <div class="reel" id="holder2">
+        <div id="bag2"></div>
+    </div>
+
+    <div class="reel" id="holder3">
+        <div id="bag3"></div>
+    </div>
+</div>
+
+<div id="slot-display">
+    <div id="slot-overlay"></div>
+    <div id="slot-overlay-line"></div>
+    <div id="slot-curr-clicks">0</div>
+    <div id="slot-zeros">00000000000</div>
+</div>
+
+<div id="wrapp">
+    <button id="click-button"><img id="wheel" src="images/kemdiu.png" alt="spinner"></button>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+<script type="module" src="scripts/firebase_database.js"></script>
+<script type="module" src="scripts/SlotMachine.js" charset="utf-8"></script>
 </body>
 </html>

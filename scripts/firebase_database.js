@@ -8,8 +8,7 @@ const database = firebase.database();
 const countRef = database.ref('button_clicks/total_count');
 
 // Function to update the click count in the database transactionally
-// This is crucial for multi-user scenarios to prevent lost clicks.
-function incrementClickCount() {
+function incrementDbClickCount() {
     countRef.transaction(function(currentData) {
         // If the counter doesn't exist, start at 0, otherwise increment
         if (currentData === null) {
@@ -34,8 +33,12 @@ function incrementClickCount() {
 countRef.on('value', (snapshot) => {
     const currentCount = snapshot.val();
     // Display 0 if the count is null (i.e., hasn't been set yet)
-    document.getElementById('click-count').textContent = currentCount !== null ? currentCount : 0;
+    document.getElementById('slot-total-clicks').textContent = currentCount !== null ? currentCount : 0;
 });
 
+function addDatabaseClickListener() {
 // Add event listener to the button to trigger the increment function
-document.getElementById('click-button').addEventListener('click', incrementClickCount);
+    document.getElementById('click-button').addEventListener('click', incrementDbClickCount);
+}
+
+export { incrementDbClickCount };
