@@ -45,6 +45,25 @@ h1 {
     padding-top: 10px;
 }
 
+.region-select-container {
+    margin: 10px auto;
+}
+
+#region-select {
+    font-family: Maple;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px solid #272838;
+    background-color: #d1faff;
+    cursor: pointer;
+}
+
+#region-select:disabled {
+    background-color: #a0a0a0;
+    cursor: not-allowed;
+}
+
 footer {
     position: relative;
     left: 0;
@@ -99,8 +118,8 @@ footer {
     animation-timing-function: linear;
     -webkit-animation-name: ticker;
     animation-name: ticker;
-    -webkit-animation-duration: 160s; /*increase time when adding more content*/
-    animation-duration: 160s; /*increase time when adding more content*/
+    -webkit-animation-duration: 170s; /*increase time when adding more content*/
+    animation-duration: 170s; /*increase time when adding more content*/
 }
 .ticker_item {
     display: inline-block;

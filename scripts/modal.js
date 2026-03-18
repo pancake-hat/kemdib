@@ -1,4 +1,5 @@
 // generic file name to avoid ublock lol
+// add event listener when the module loads for closing modal
 document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('pop-up-modal');
     const closeButton = document.querySelector('.close-modal');
