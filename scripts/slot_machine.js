@@ -1,4 +1,6 @@
-import {incrementDbClickCount} from "./firebase_database.js";
+import { incrementDbClickCount } from "./firebase_database.js";
+import { tryPopUpAd } from "./modal.js";
+import { blink } from "./utils.js";
 
 var currClicks = 0;
 var bag1 = $('#bag1');
@@ -32,7 +34,7 @@ applyRandImgs(bag3, slotImg[2], 23);
 
 $('#click-button').on("click", slot_machine);
 $('#click-button').on("click", incrementDbClickCount);
-//$('##click-button').on("click", tryPopUpAd);
+$('#click-button').on("click", tryPopUpAd);
 
 function slot_machine() {
     // add spin counter
@@ -174,16 +176,6 @@ function applyRandImgs(element, array, num) {
 
 function addClicks() {
     currClicks += 1;
-
     blink($('#slot-curr-clicks'));
     $('#slot-curr-clicks').text(currClicks);
-
 }
-
-function blink(element){
-    element.animate({ opacity: 0 }, 200, 'linear', function(){
-        $(this).animate({ opacity: 1 }, 200);
-    });
-}
-
-export { blink }

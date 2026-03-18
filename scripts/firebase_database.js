@@ -1,5 +1,5 @@
 import firebaseConfig from "./firebase_config.js";
-import {blink} from "./slot_machine.js";
+import { blink } from "./utils.js";
 
 // init firebase db
 firebase.initializeApp(firebaseConfig);
@@ -8,7 +8,7 @@ const database = firebase.database();
 const totalCountRef = database.ref('button_clicks/total_count');
 
 // update total click count in db
-function incrementDbClickCount() {
+export function incrementDbClickCount() {
     totalCountRef.transaction(function(currentData) {
         if (currentData === null) {
             return 1;
@@ -27,8 +27,9 @@ function incrementDbClickCount() {
 // listen for changes to total_count and update the UI in real-time
 totalCountRef.on('value', (snapshot) => {
     const currTotalCount = snapshot.val();
-    blink($('#slot-total-clicks'));
-    document.getElementById('slot-total-clicks').textContent = currTotalCount !== null ? currTotalCount : 0;
+    const totalClicksElement = document.getElementById('slot-total-clicks');
+    if (totalClicksElement) {
+        blink($(totalClicksElement));
+        totalClicksElement.textContent = currTotalCount !== null ? currTotalCount : 0;
+    }
 });
-
-export { incrementDbClickCount };

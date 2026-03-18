@@ -13,7 +13,7 @@
 
 <body>
 
-<div id= "update-ticker">
+<div id="update-ticker">
     <span class="ticker_close">&times;</span>
     <div class="ticker-wrap">
         <div class="ticker">
@@ -60,12 +60,20 @@
     <button id="click-button"><img id="wheel" src="images/kemdiu.png" alt="spinner"></button>
 </div>
 
+<div id="pop-up-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <a href="https://www.youtube.com/watch?v=jfZOvQnsBq0" target="_blank" rel="noopener noreferrer"><img src="images/kemdiu.png"><br></a>
+    </div>
+</div>
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
 <script type="module" src="scripts/firebase_database.js"></script>
 <script type="module" src="scripts/slot_machine.js" charset="utf-8"></script>
 <script type="module" src="scripts/ticker.js" charset="utf-8"></script>
+<script type="module" src="scripts/modal.js" charset="utf-8"></script>
 
 </body>
 </html>
