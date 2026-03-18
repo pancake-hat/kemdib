@@ -99,15 +99,15 @@ footer {
     animation-timing-function: linear;
     -webkit-animation-name: ticker;
     animation-name: ticker;
-    -webkit-animation-duration: 140s; /*increase time when adding more content*/
-    animation-duration: 140s; /*increase time when adding more content*/
+    -webkit-animation-duration: 160s; /*increase time when adding more content*/
+    animation-duration: 160s; /*increase time when adding more content*/
 }
 .ticker_item {
     display: inline-block;
     padding: 0 2rem;
     font-family: Arial;
     font-size: 1rem;
-    color: yellow;
+    color: #efef7c;
 }
 
 .ticker_close {
