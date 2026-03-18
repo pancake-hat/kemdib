@@ -15,36 +15,31 @@ var slotItems = [
 const NUM_SLOT_ITEMS = 6;
 //var premium = ["images/premium/new_equi_cube.png", "images/premium/equi_cube.png", "images/premium/new_hexa_cube.png", "images/premium/hexa_cube.png", "images/premium/new_uni_cube.png", "images/premium/uni_cube.png"];
 
-//slotImg array which contains the images for each of the three wheels
+// slotImg array which contains the images for each of the three wheels
 var slotImg = [[], [], []];
 defaultImgs(slotImg[0]);
 defaultImgs(slotImg[1]);
 defaultImgs(slotImg[2]);
 
-//counter variable for randomizeImgs()
-var counter = 0;
-
+// counter for randomizeImgs()
+var slotImgCounter = 0;
 var x = 0;
 
-//randomizing and adding images to html (#bags)
+// randomizing and adding images to #bags
 applyRandImgs(bag1, slotImg[0], 23);
 applyRandImgs(bag2, slotImg[1], 23);
 applyRandImgs(bag3, slotImg[2], 23);
 
-console.log(slotImg);
-
-$('#click-button').on("click", slotMachine);
+$('#click-button').on("click", slot_machine);
 $('#click-button').on("click", incrementDbClickCount);
+//$('##click-button').on("click", tryPopUpAd);
 
-//$('#btn').on("click", tryPopUpAd);
-console.log(slotImg);
-
-function slotMachine() {
-    //add spin counter
+function slot_machine() {
+    // add spin counter
     addClicks();
-    //remove event listener
+    // remove event listener
     $('#click-button').off("click");
-    //spinner button animation
+    // spinner button animation
     $('#wheel').addClass("spin");
 
     /*
@@ -58,8 +53,8 @@ function slotMachine() {
     audioElement1.play();
     */
 
-    //the wheels will physically stop at the same spot every time
-    //reset function is there in order to get it to the starting point again
+    // wheels will physically stop at the same spot every time
+    // reset() sets wheel back to starting point
     reset(bag1);
     reset(bag2);
     reset(bag3);
@@ -68,7 +63,7 @@ function slotMachine() {
         applyRandImgs(bag2, slotImg[1], 23);
         applyRandImgs(bag3, slotImg[2], 23);
     }
-    //spinning the wheels one by one
+    // spin wheels one by one
     spin(bag1);
     setTimeout(function() {
         //audioElement2.play();
@@ -82,15 +77,16 @@ function slotMachine() {
     setTimeout(function() {
         $('#wheel').removeClass("spin");
 
-        //returning the event listener
-        $('#click-button').on("click", slotMachine);
+        // return event listener
+        $('#click-button').on("click", slot_machine);
         $('#click-button').on("click", incrementDbClickCount);
 
-        //check results
+        // check results
         console.log($('.result').eq(0).attr("src"));
         console.log($('.result').eq(1).attr("src"));
         console.log($('.result').eq(2).attr("src"));
 
+        // all slot images match
         if ($('.result').eq(0).attr("src") == $('.result').eq(1).attr("src") && $('.result').eq(1).attr("src") == $('.result').eq(2).attr("src")) {
             console.log("yipee");
             document.querySelector("#slots").classList.add("win");
@@ -133,17 +129,17 @@ function randomizeImgs(array, num) {
     // }
 
     let random = Math.floor(Math.random()* NUM_SLOT_ITEMS);
-    if (counter < num) {
+    if (slotImgCounter < num) {
         if (array.length < 1) {
-            array[counter] = imgSetToUse[random];
-            counter++;
-        } else if (array[counter-1] != imgSetToUse[random]) {
+            array[slotImgCounter] = imgSetToUse[random];
+            slotImgCounter++;
+        } else if (array[slotImgCounter-1] != imgSetToUse[random]) {
             if (array.length < 2) {
-                array[counter] = imgSetToUse[random];
-                counter++;
-            } else if (array[counter-2] != imgSetToUse[random]) {
-                array[counter] = imgSetToUse[random];
-                counter++;
+                array[slotImgCounter] = imgSetToUse[random];
+                slotImgCounter++;
+            } else if (array[slotImgCounter-2] != imgSetToUse[random]) {
+                array[slotImgCounter] = imgSetToUse[random];
+                slotImgCounter++;
             } else {
                 randomizeImgs(array, num);
             }
@@ -155,7 +151,7 @@ function randomizeImgs(array, num) {
 }
 
 function applyRandImgs(element, array, num) {
-    // Leave the 9 visible slotItems on the screen unchanged for the second spin while randomizing others
+    // leave the 9 visible slotItems on the screen unchanged for the second spin while randomizing others
     if (array[2] != undefined) {
         array[23] = array[2];
         array[24] = array[3];
@@ -163,8 +159,7 @@ function applyRandImgs(element, array, num) {
     }
 
     randomizeImgs(array, num);
-    // Reset the counter
-    counter = 0;
+    slotImgCounter = 0; // reset counter
 
     let text = "";
     for (let i = 0; i < array.length; i++) {
@@ -190,3 +185,5 @@ function blink(element){
         $(this).animate({ opacity: 1 }, 200);
     });
 }
+
+export { blink }

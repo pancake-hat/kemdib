@@ -1,16 +1,15 @@
-// Initialize Firebase
 import firebaseConfig from "./firebase_config.js";
+import {blink} from "./slot_machine.js";
 
+// init firebase db
 firebase.initializeApp(firebaseConfig);
 
-// Get a reference to the Realtime Database service
 const database = firebase.database();
-const countRef = database.ref('button_clicks/total_count');
+const totalCountRef = database.ref('button_clicks/total_count');
 
-// Function to update the click count in the database transactionally
+// update total click count in db
 function incrementDbClickCount() {
-    countRef.transaction(function(currentData) {
-        // If the counter doesn't exist, start at 0, otherwise increment
+    totalCountRef.transaction(function(currentData) {
         if (currentData === null) {
             return 1;
         } else {
@@ -18,27 +17,18 @@ function incrementDbClickCount() {
         }
     }, function(error, committed, snapshot) {
         if (error) {
-            console.error("Transaction failed abnormally!", error);
+            console.error("Transaction failed with error", error);
         } else if (!committed) {
-            console.log("Transaction aborted (data not committed, likely another client updated it).");
-        } else {
-            console.log("Click count incremented successfully!");
+            console.log("Transaction aborted, data not commited.");
         }
     });
 }
 
-// Listen for changes to the click count and update the UI in real-time
-// Any change to 'button_clicks/total_count' in the database will
-// automatically update the displayed count on your page.
-countRef.on('value', (snapshot) => {
-    const currentCount = snapshot.val();
-    // Display 0 if the count is null (i.e., hasn't been set yet)
-    document.getElementById('slot-total-clicks').textContent = currentCount !== null ? currentCount : 0;
+// listen for changes to total_count and update the UI in real-time
+totalCountRef.on('value', (snapshot) => {
+    const currTotalCount = snapshot.val();
+    blink($('#slot-total-clicks'));
+    document.getElementById('slot-total-clicks').textContent = currTotalCount !== null ? currTotalCount : 0;
 });
-
-function addDatabaseClickListener() {
-// Add event listener to the button to trigger the increment function
-    document.getElementById('click-button').addEventListener('click', incrementDbClickCount);
-}
 
 export { incrementDbClickCount };
