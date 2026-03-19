@@ -19,8 +19,8 @@ body {
     display: table-cell;
     vertical-align: middle;
     text-align: center;
-    background-color: #6a8eae;
-    background-image: linear-gradient(to bottom, #6a8eae, #9bd1e5, #d1faff);
+    background-color: #212330;
+    background-image: linear-gradient(to bottom, #191A24, #212330, #191A24);
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -41,6 +41,7 @@ a:hover {
 
 h1 {
     font-family: Maple;
+    color: #98D2EB;
     text-align:center;
     padding-top: 10px;
 }
@@ -53,14 +54,16 @@ h1 {
     font-family: Maple;
     padding: 5px 10px;
     font-size: 16px;
+    color: #E1F2FE;
     border-radius: 5px;
     border: 2px solid #272838;
-    background-color: #d1faff;
+    background-color: #272838;
     cursor: pointer;
 }
 
 #region-select:disabled {
-    background-color: #a0a0a0;
+    color: #444444;
+    background-color: #272727;
     cursor: not-allowed;
 }
 
@@ -205,7 +208,7 @@ button {
     position: absolute;
     left: 50%;
     margin-left: -64px;
-    background-color: #6a8eae;
+    background-color: #191A24;
 }
 
 button:focus {
@@ -274,7 +277,7 @@ button:focus {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    border: 2px solid #6a8eae;
+    border: 2px solid #B2B1CF;
     bottom: 20px; /*Height from bottom item*/
     height: 30px;
     left: 50%; /*spacing from left of screen*/
@@ -296,7 +299,7 @@ button:focus {
 }
 
 #slot-curr-clicks {
-    color: #9bd1e5;
+    color: #B2B1CF;
     font-weight: bold;
     z-index: 2;
 }
@@ -396,7 +399,7 @@ button:focus {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    border: 3px solid #d1faff;
+    border: 3px solid #E1F2FE;
     bottom: -20px; /*Height from bottom item*/
     height: 45px;
     left: 40%; /*spacing from left of screen*/
@@ -417,7 +420,7 @@ button:focus {
     top: 6px;
 }
 #slot-total-clicks {
-    color: #d1faff;
+    color: #E1F2FE;
     font-weight: bold;
     z-index: 2;
 }
