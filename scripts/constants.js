@@ -1,13 +1,23 @@
 export const Region = {
-    MSEA: 'msea',
-    CMS: 'cms,',
-    GMS: 'gms',
-    JMS: 'jms',
+//    DEBUG: 'debug',
     KMS: 'kms',
+    MSEA: 'msea',
+    GMS: 'gms',
+    CMS: 'cms,',
+    JMS: 'jms',
 //    TMS: 'tms',
 //    P2W: 'p2w',
 //    LMAO: 'lmao',
 };
+
+export const debugSlotItems = [
+    'images/cubes/A10_reg_cube.png',
+    'images/cubes/A11_choice_cube.png',
+    'images/cubes/A11_choice_cube.png',
+    'images/cubes/A11_choice_cube.png',
+    'images/cubes/A11_choice_cube.png',
+    'images/cubes/A11_choice_cube.png'
+];
 
 export const mseaSlotItems = [
     'images/cubes/A01_yellow_cube.png',

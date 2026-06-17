@@ -1,4 +1,4 @@
-import { incrementDbClickCount } from "./firebase_database.js";
+import { incrementDbClickCount, recordWin } from "./firebase_database.js";
 import { tryPopUpAd } from "./modal.js";
 import { blink } from "./utils.js";
 import {
@@ -11,6 +11,7 @@ import {
     tmsSlotItems,
     jmsSlotItems,
     lmaoSlotItems,
+    debugSlotItems,
 } from "./constants.js";
 
 const NUM_SLOT_ITEMS = 6;
@@ -93,6 +94,8 @@ function getRegionSet(region) {
             return tmsSlotItems;
         case Region.LMAO:
             return lmaoSlotItems;
+        case Region.DEBUG:
+            return debugSlotItems;
         case Region.MSEA:
         default:
             return mseaSlotItems;
@@ -175,7 +178,8 @@ function spinSlotMachine() {
         if ($('.result').eq(0).attr("src") == $('.result').eq(1).attr("src") && $('.result').eq(1).attr("src") == $('.result').eq(2).attr("src")) {
             console.log("yipee");
             document.querySelector("#slots").classList.add("win");
-            setTimeout(() => document.querySelector("#slots").classList.remove("win"), 3000)
+            setTimeout(() => document.querySelector("#slots").classList.remove("win"), 3000);
+            recordWin();
         } else {
             console.log("sadge");
         }
