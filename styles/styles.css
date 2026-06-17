@@ -1,12 +1,12 @@
 /* https://coolors.co/98d2eb-e1f2fe-272838-191a24-b2b1cf */
 @font-face {
-    font-family: Maple;
-    src: url("/fonts/Maplestory_Light.ttf");
+    font-family: 'Maple';
+    src: url("../fonts/Maplestory_Light.ttf") format("truetype");
 }
 @font-face {
-    font-family: Maple;
+    font-family: 'Maple';
     font-weight: bold;
-    src: url("/fonts/Maplestory_Bold.ttf");
+    src: url("../fonts/Maplestory_Bold.ttf") format("truetype");
 }
 
 html, body {
