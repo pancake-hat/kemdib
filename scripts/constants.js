@@ -4,9 +4,9 @@ export const Region = {
     GMS: 'gms',
     JMS: 'jms',
     KMS: 'kms',
-    TMS: 'tms',
-    P2W: 'p2w',
-    LMAO: 'lmao',
+//    TMS: 'tms',
+//    P2W: 'p2w',
+//    LMAO: 'lmao',
 };
 
 export const mseaSlotItems = [

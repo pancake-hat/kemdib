@@ -43,26 +43,38 @@ applyRandImgs(bag3, slotImg[2], 23);
 $('#click-button').on("click", spinSlotMachine);
 $('#click-button').on("click", incrementDbClickCount);
 $('#click-button').on("click", tryPopUpAd);
-$('#region-select').on("change", changeRegionImages);
 
 function populateRegionOptions() {
-    const $select = $('#region-select');
-    $select.empty();
+    const $container = $('#region-select');
+    $container.empty();
     Object.keys(Region).forEach(key => {
-        const $option = $('<option></option>')
-            .val(Region[key])
-            .text(key);
-        $select.append($option);
+        const regionValue = Region[key];
+        const $button = $('<button></button>')
+            .addClass('region-button')
+            .text(key)
+            .attr('data-region', regionValue)
+            .on('click', function() {
+                changeRegionImages(regionValue);
+            });
+
+        if (regionValue === selectedRegion) {
+            $button.addClass('selected');
+        }
+
+        $container.append($button);
     });
 }
 
-function changeRegionImages() {
-    const oldRegion = selectedRegion;
-    selectedRegion = $('#region-select').val();
+function changeRegionImages(newRegion) {
+    if (selectedRegion === newRegion) return;
 
-    if (oldRegion !== selectedRegion) {
-        swapRegionImages(oldRegion, selectedRegion);
-    }
+    const oldRegion = selectedRegion;
+    selectedRegion = newRegion;
+
+    $('.region-button').removeClass('selected');
+    $(`.region-button[data-region="${newRegion}"]`).addClass('selected');
+
+    swapRegionImages(oldRegion, selectedRegion);
 }
 
 function getRegionSet(region) {
@@ -123,21 +135,9 @@ function spinSlotMachine() {
     addClicks();
     // remove event listener
     $('#click-button').off("click");
-    $('#region-select').off("change");
-    $('#region-select').prop('disabled', true);
+    $('.region-button').prop('disabled', true);
     // spinner button animation
     $('#wheel').addClass("spin");
-
-    /*
-    //audio effects for the wheels
-    var audioElement1 = document.createElement('audio');
-    var audioElement2 = document.createElement('audio');
-    var audioElement3 = document.createElement('audio');
-    audioElement1.setAttribute('src', 'audio/holder1.wav');
-    audioElement2.setAttribute('src', 'audio/holder2.wav');
-    audioElement3.setAttribute('src', 'audio/holder3.wav');
-    audioElement1.play();
-    */
 
     // wheels will physically stop at the same spot every time
     // reset() sets wheel back to starting point
@@ -152,11 +152,9 @@ function spinSlotMachine() {
     // spin wheels one by one
     spin(bag1);
     setTimeout(function() {
-        //audioElement2.play();
         spin(bag2);
     }, 1000)
     setTimeout(function() {
-        //audioElement3.play();
         spin(bag3);
     }, 2000)
 
@@ -166,8 +164,7 @@ function spinSlotMachine() {
         // return event listener
         $('#click-button').on("click", spinSlotMachine);
         $('#click-button').on("click", incrementDbClickCount);
-        $('#region-select').on("change", changeRegionImages);
-        $('#region-select').prop('disabled', false);
+        $('.region-button').prop('disabled', false);
 
         // check results
         console.log($('.result').eq(0).attr("src"));
