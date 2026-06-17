@@ -24,6 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
 export function tryPopUpAd() {
     const modal = document.getElementById('pop-up-modal');
     if (modal) {
-        modal.style.display = "block";
+        modal.style.display = "flex";
     }
 }
