@@ -1,6 +1,6 @@
 import { incrementDbClickCount, recordWin } from "./firebase_database.js";
 import { tryPopUpAd } from "./modal.js";
-import { blink } from "./utils.js";
+import { blink, getCubeIdFromPath } from "./utils.js";
 import {
     Region,
     mseaSlotItems,
@@ -170,16 +170,20 @@ function spinSlotMachine() {
         $('.region-button').prop('disabled', false);
 
         // check results
-        console.log($('.result').eq(0).attr("src"));
-        console.log($('.result').eq(1).attr("src"));
-        console.log($('.result').eq(2).attr("src"));
+        const result0 = $('.result').eq(0).attr("src");
+        const result1 = $('.result').eq(1).attr("src");
+        const result2 = $('.result').eq(2).attr("src");
+        console.log(result0);
+        console.log(result1);
+        console.log(result2);
 
-        // all slot images match
-        if ($('.result').eq(0).attr("src") == $('.result').eq(1).attr("src") && $('.result').eq(1).attr("src") == $('.result').eq(2).attr("src")) {
+        if (result0 === result1 && result1 === result2) {
             console.log("yipee");
             document.querySelector("#slots").classList.add("win");
             setTimeout(() => document.querySelector("#slots").classList.remove("win"), 3000);
-            recordWin();
+
+            const winningCubeId = getCubeIdFromPath(result0);
+            recordWin(winningCubeId);
         } else {
             console.log("sadge");
         }

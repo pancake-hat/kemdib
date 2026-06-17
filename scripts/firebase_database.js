@@ -1,5 +1,5 @@
 import firebaseConfig from "./firebase_config.js";
-import { blink } from "./utils.js";
+import { blink, getCubeImageFromId } from "./utils.js";
 
 // init firebase db
 firebase.initializeApp(firebaseConfig);
@@ -27,10 +27,11 @@ export function incrementDbClickCount() {
     });
 }
 
-// Record a new win
-export function recordWin() {
+// record new win
+export function recordWin(cubeId) {
     winsRef.push({
         spinNumber: lastTotalCount,
+        cubeId: cubeId,
         timestamp: firebase.database.ServerValue.TIMESTAMP
     });
 }
@@ -58,7 +59,18 @@ winsRef.orderByChild('timestamp').limitToLast(10).on('value', (snapshot) => {
         wins.forEach((win) => {
             const winElement = document.createElement('div');
             winElement.className = 'win-entry';
-            winElement.textContent = `Spin #${win.spinNumber} was a winner!`;
+
+            const textSpan = document.createElement('span');
+            textSpan.textContent = `Spin #${win.spinNumber} won with `;
+
+            const cubeImg = document.createElement('img');
+            cubeImg.src = getCubeImageFromId(win.cubeId);
+            cubeImg.className = 'win-cube-icon';
+            cubeImg.style.height = '20px'; // Ensure inline
+            cubeImg.style.verticalAlign = 'middle';
+
+            winElement.appendChild(textSpan);
+            winElement.appendChild(cubeImg);
             winsList.appendChild(winElement);
         });
     }

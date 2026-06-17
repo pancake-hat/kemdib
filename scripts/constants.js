@@ -46,15 +46,6 @@ export const kmsSlotItems = [
     'images/cubes/A07_white_acube.png'
 ]
 
-export const tmsSlotItems = [
-    'images/cubes/S09_new_year_mirc_cube.png',
-    'images/cubes/S10_new_year_master_mirc_cube.png',
-    'images/cubes/T00_mysterious_cube.png',
-    'images/cubes/T01_restoration_cube.png',
-    'images/cubes/T02_precious_acube.png',
-    'images/cubes/T03_restoration_acube.png',
-]
-
 export const cmsSlotItems = [
     'images/cubes/C00_root_cube.png',
     'images/cubes/C01_deep_root_cube.png',
@@ -65,12 +56,21 @@ export const cmsSlotItems = [
 ]
 
 export const jmsSlotItems = [
-    'images/cubes/J00_memorial_cube.png',
-    'images/cubes/J01_master_mirc_acube.png',
+    'images/cubes/A01_yellow_cube.png',
+    'images/cubes/A02_purple_cube.png',
     'images/cubes/J10_neo_cube.png',
     'images/cubes/J11_mega_cube.png',
     'images/cubes/J12_neo_acube.png',
     'images/cubes/J13_mega_acube.png'
+]
+
+export const tmsSlotItems = [
+    'images/cubes/S09_new_year_mirc_cube.png',
+    'images/cubes/S10_new_year_master_mirc_cube.png',
+    'images/cubes/T00_mysterious_cube.png',
+    'images/cubes/T01_restoration_cube.png',
+    'images/cubes/T02_precious_acube.png',
+    'images/cubes/T03_restoration_acube.png',
 ]
 
 export const p2wSlotItems = [
