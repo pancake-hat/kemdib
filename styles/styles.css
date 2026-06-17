@@ -253,6 +253,7 @@ footer {
 }
 
 #wrapp {
+    grid-column: 2;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -382,4 +383,91 @@ button#click-button {
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 1024px) {
+    h1 {
+        margin-top: 80px;
+        font-size: 24px;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .game-layout {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        width: 100%;
+    }
+
+    .slots-container {
+        order: 1;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #wrapp {
+        order: 2;
+        margin: 10px 0;
+    }
+
+    .region-select-container {
+        order: 3;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-left: 0;
+        width: 100%;
+        gap: 10px;
+        margin: 10px 0;
+    }
+
+    .recent-wins-container {
+        order: 4;
+        align-items: center;
+        padding-right: 0;
+        padding-top: 0;
+        width: 100%;
+    }
+
+    #wins-list {
+        text-align: center;
+        align-items: center;
+    }
+
+    .win-item {
+        border-right: none;
+        border-left: 4px solid #98D2EB;
+    }
+
+    #slot-display {
+        width: 180px;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+
+    .modal-content img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 700px) {
+    #slots {
+        transform: scale(0.7);
+        margin: -40px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    #slots {
+        transform: scale(0.5);
+        margin: -100px 0;
+    }
 }
