@@ -6,7 +6,7 @@ export const Region = {
     CMS: 'cms,',
     JMS: 'jms',
 //    TMS: 'tms',
-//    P2W: 'p2w',
+    P2W: 'p2w',
 //    LMAO: 'lmao',
 };
 

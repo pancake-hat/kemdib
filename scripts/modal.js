@@ -21,9 +21,14 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // when the user clicks the button, open the modal
-export function tryPopUpAd() {
+export function tryPopUpAd(winningImageUrl) {
     const modal = document.getElementById('pop-up-modal');
+    const modalImage = document.getElementById('modal-image');
+
     if (modal) {
+        if (modalImage && winningImageUrl) {
+            modalImage.src = winningImageUrl;
+        }
         modal.style.display = "flex";
     }
 }

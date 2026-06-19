@@ -183,7 +183,7 @@ function spinSlotMachine() {
 
             const winningCubeId = getCubeIdFromPath(result0);
             recordWin(winningCubeId);
-            tryPopUpAd();
+            tryPopUpAd(result0);
         } else {
             console.log("sadge");
         }
