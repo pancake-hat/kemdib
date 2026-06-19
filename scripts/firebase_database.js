@@ -8,7 +8,7 @@ const database = firebase.database();
 const totalCountRef = database.ref('button_clicks/total_count');
 const winsRef = database.ref('wins');
 
-let lastTotalCount = 0;
+export let lastTotalCount = 0;
 
 // update total click count in db
 export function incrementDbClickCount() {
@@ -28,9 +28,9 @@ export function incrementDbClickCount() {
 }
 
 // record new win
-export function recordWin(cubeId) {
+export function recordWin(cubeId, spinNumber) {
     winsRef.push({
-        spinNumber: lastTotalCount,
+        spinNumber: spinNumber !== undefined ? spinNumber : lastTotalCount,
         cubeId: cubeId,
         timestamp: firebase.database.ServerValue.TIMESTAMP
     });

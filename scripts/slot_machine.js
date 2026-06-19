@@ -1,4 +1,4 @@
-import { incrementDbClickCount, recordWin } from "./firebase_database.js";
+import { incrementDbClickCount, recordWin, lastTotalCount } from "./firebase_database.js";
 import { tryPopUpAd } from "./modal.js";
 import { blink, getCubeIdFromPath } from "./utils.js";
 import {
@@ -133,6 +133,9 @@ function updateBagHtml(element, array) {
 }
 
 function spinSlotMachine() {
+    // currSpin is recorded as the value AFTER the click is registered.
+    const currSpin = lastTotalCount + 1;
+
     // add spin counter
     addClicks();
     // remove event listener
@@ -182,7 +185,7 @@ function spinSlotMachine() {
             setTimeout(() => document.querySelector("#slots").classList.remove("win"), 3000);
 
             const winningCubeId = getCubeIdFromPath(result0);
-            recordWin(winningCubeId);
+            recordWin(winningCubeId, currSpin);
             tryPopUpAd(result0);
         } else {
             console.log("sadge");
