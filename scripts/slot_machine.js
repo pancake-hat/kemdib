@@ -43,7 +43,6 @@ applyRandImgs(bag3, slotImg[2], 23);
 
 $('#click-button').on("click", spinSlotMachine);
 $('#click-button').on("click", incrementDbClickCount);
-$('#click-button').on("click", tryPopUpAd);
 
 function populateRegionOptions() {
     const $container = $('#region-select');
@@ -184,6 +183,7 @@ function spinSlotMachine() {
 
             const winningCubeId = getCubeIdFromPath(result0);
             recordWin(winningCubeId);
+            tryPopUpAd();
         } else {
             console.log("sadge");
         }

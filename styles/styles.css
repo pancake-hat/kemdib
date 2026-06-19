@@ -220,6 +220,20 @@ footer {
     position: relative;
 }
 
+/* Thin red line in the center of slots */
+#slots::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    width: 640px;
+    height: 7px;
+    background-color: rgba(255, 0, 0, 0.3);
+    z-index: 10;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
 #slots > div {
     float: left;
     width: 200px;
@@ -442,10 +456,6 @@ button#click-button {
     .win-item {
         border-right: none;
         border-left: 4px solid #98D2EB;
-    }
-
-    #slot-display {
-        width: 180px;
     }
 
     .modal-content {
