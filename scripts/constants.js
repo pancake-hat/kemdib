@@ -5,36 +5,35 @@ export const Region = {
     GMS: 'gms',
     CMS: 'cms,',
     JMS: 'jms',
-//    TMS: 'tms',
+    TMS: 'tms',
     P2W: 'p2w',
-//    LMAO: 'lmao',
 };
 
 export const debugSlotItems = [
-    'images/cubes/A10_reg_cube.png',
-    'images/cubes/A11_choice_cube.png',
-    'images/cubes/A11_choice_cube.png',
-    'images/cubes/A11_choice_cube.png',
-    'images/cubes/A11_choice_cube.png',
-    'images/cubes/A11_choice_cube.png'
+    'images/cubes/M10_reg_cube.png',
+    'images/cubes/M11_choice_cube.png',
+    'images/cubes/M11_choice_cube.png',
+    'images/cubes/M11_choice_cube.png',
+    'images/cubes/M11_choice_cube.png',
+    'images/cubes/M11_choice_cube.png'
 ];
 
 export const mseaSlotItems = [
     'images/cubes/A01_yellow_cube.png',
     'images/cubes/A02_purple_cube.png',
-    'images/cubes/A10_reg_cube.png',
-    'images/cubes/A11_choice_cube.png',
-    'images/cubes/A12_reg_acube.png',
-    'images/cubes/A13_choice_acube.png'
+    'images/cubes/M10_reg_cube.png',
+    'images/cubes/M11_choice_cube.png',
+    'images/cubes/M12_reg_acube.png',
+    'images/cubes/M13_choice_acube.png'
 ];
 
 export const gmsSlotItems = [
-    'images/cubes/G11_hard_cube.png',
-    'images/cubes/G12_solid_cube.png',
-    'images/cubes/G13_glowing_cube.png',
-    'images/cubes/G14_bright_cube.png',
-    'images/cubes/G16_glowing_acube.png',
-    'images/cubes/G17_bright_acube.png'
+    'images/cubes/G10_hard_cube.png',
+    'images/cubes/G11_solid_cube.png',
+    'images/cubes/G12_glowing_cube.png',
+    'images/cubes/G13_bright_cube.png',
+    'images/cubes/G14_glowing_acube.png',
+    'images/cubes/G15_bright_acube.png'
 ];
 
 export const kmsSlotItems = [
@@ -49,10 +48,10 @@ export const kmsSlotItems = [
 export const cmsSlotItems = [
     'images/cubes/C00_root_cube.png',
     'images/cubes/C01_deep_root_cube.png',
-    'images/cubes/C02_beyond_cube.png',
-    'images/cubes/C03_excellence_cube.png',
-    'images/cubes/C04_beyond_acube.png',
-    'images/cubes/C05_excellence_acube.png'
+    'images/cubes/C10_beyond_cube.png',
+    'images/cubes/C11_excellence_cube.png',
+    'images/cubes/C12_beyond_acube.png',
+    'images/cubes/C13_excellence_acube.png'
 ]
 
 export const jmsSlotItems = [
@@ -65,8 +64,8 @@ export const jmsSlotItems = [
 ]
 
 export const tmsSlotItems = [
-    'images/cubes/S09_new_year_mirc_cube.png',
-    'images/cubes/S10_new_year_master_mirc_cube.png',
+    'images/cubes/A01_yellow_cube.png',
+    'images/cubes/A02_purple_cube.png',
     'images/cubes/T00_mysterious_cube.png',
     'images/cubes/T01_restoration_cube.png',
     'images/cubes/T02_precious_acube.png',
@@ -75,11 +74,11 @@ export const tmsSlotItems = [
 
 export const p2wSlotItems = [
     'images/cubes/S00_hexa_cube.png',
-    'images/cubes/S01_equi_cube.png',
-    'images/cubes/S02_uni_cube.png',
-    'images/cubes/S05_hexa_cube.png',
-    'images/cubes/S06_equi_cube.png',
-    'images/cubes/S07_uni_cube.png'
+    'images/cubes/S03_equi_cube.png',
+    'images/cubes/S06_uni_cube.png',
+    'images/cubes/S02_hexa_cube.png',
+    'images/cubes/S04_equi_cube.png',
+    'images/cubes/S08_uni_cube.png'
 ]
 
 export const lmaoSlotItems = [
@@ -88,7 +87,7 @@ export const lmaoSlotItems = [
     'images/cubes/B02_horntail_cube.png',
     'images/cubes/B03_pinkbean_cube.png',
     'images/cubes/B04_cygnus_cube.png',
-    'images/cubes/C07_strange_fcube.png'
+    'images/cubes/C22_strange_fcube.png'
 ]
 
 export const allCubes = [
@@ -100,43 +99,53 @@ export const allCubes = [
     'images/cubes/A05_sus_acube.png',
     'images/cubes/A06_green_acube.png',
     'images/cubes/A07_white_acube.png',
-    'images/cubes/A10_reg_cube.png',
-    'images/cubes/A11_choice_cube.png',
-    'images/cubes/A12_reg_acube.png',
-    'images/cubes/A13_choice_acube.png',
-    'images/cubes/A14_silver_cube.png',
-    'images/cubes/A15_gold_cube.png',
-    'images/cubes/A16_bronze_acube.png',
-    'images/cubes/B00_balrog_cube.png',
-    'images/cubes/B01_zakum_cube.png',
-    'images/cubes/B02_horntail_cube.png',
-    'images/cubes/B03_pinkbean_cube.png',
-    'images/cubes/B04_cygnus_cube.png',
-    'images/cubes/C00_root_cube.png',
-    'images/cubes/C01_deep_root_cube.png',
-    'images/cubes/C02_beyond_cube.png',
-    'images/cubes/C03_excellence_cube.png',
-    'images/cubes/C04_beyond_acube.png',
-    'images/cubes/C05_excellence_acube.png',
-    'images/cubes/C06_alien_ncube.png',
-    'images/cubes/C07_strange_fcube.png',
-    'images/cubes/C08_maple_mirc_cube.png',
-    'images/cubes/C09_fantasy_mirc_cube.png',
-    'images/cubes/G10_mystical_cube.png',
-    'images/cubes/G11_hard_cube.png',
-    'images/cubes/G12_solid_cube.png',
-    'images/cubes/G13_glowing_cube.png',
-    'images/cubes/G14_bright_cube.png',
-    'images/cubes/G15_mystical_acube.png',
-    'images/cubes/G16_glowing_acube.png',
-    'images/cubes/G17_bright_acube.png',
-    'images/cubes/G18_hermes_cube.png',
+    'images/cubes/A11_silver_cube.png',
+    'images/cubes/A12_gold_cube.png',
+    'images/cubes/A10_bronze_acube.png',
+    'images/cubes/M10_reg_cube.png',
+    'images/cubes/M11_choice_cube.png',
+    'images/cubes/M12_reg_acube.png',
+    'images/cubes/M13_choice_acube.png',
+    'images/cubes/G00_mystical_cube.png',
+    'images/cubes/G10_hard_cube.png',
+    'images/cubes/G11_solid_cube.png',
+    'images/cubes/G12_glowing_cube.png',
+    'images/cubes/G13_bright_cube.png',
+    'images/cubes/G14_glowing_acube.png',
+    'images/cubes/G15_bright_acube.png',
+    'images/cubes/G20_mystical_acube.png',
+    'images/cubes/G21_hermes_cube.png',
     'images/cubes/J00_memorial_cube.png',
     'images/cubes/J01_master_mirc_acube.png',
     'images/cubes/J10_neo_cube.png',
     'images/cubes/J11_mega_cube.png',
     'images/cubes/J12_neo_acube.png',
     'images/cubes/J13_mega_acube.png',
+    'images/cubes/C00_root_cube.png',
+    'images/cubes/C01_deep_root_cube.png',
+    'images/cubes/C10_beyond_cube.png',
+    'images/cubes/C11_excellence_cube.png',
+    'images/cubes/C12_beyond_acube.png',
+    'images/cubes/C13_excellence_acube.png',
+    'images/cubes/C20_alien_ncube.png',
+    'images/cubes/C22_strange_fcube.png',
+    'images/cubes/T00_mysterious_cube.png',
+    'images/cubes/T01_restoration_cube.png',
+    'images/cubes/T02_precious_acube.png',
+    'images/cubes/T03_restoration_acube.png',
+    'images/cubes/S00_hexa_cube.png',
+    'images/cubes/S01_violet_cube.png',
+    'images/cubes/S02_hexa_cube.png',
+    'images/cubes/S03_equi_cube.png',
+    'images/cubes/S04_equi_cube.png',
+    'images/cubes/S05_equi_acube.png',
+    'images/cubes/S06_uni_cube.png',
+    'images/cubes/S07_uni_acube.png',
+    'images/cubes/S08_uni_cube.png',
+    'images/cubes/S09_absolute_acube.png',
+    'images/cubes/S10_field_acube.png',
+    'images/cubes/S11_new_year_mirc_cube.png',
+    'images/cubes/S12_new_year_master_mirc_cube.png',
     'images/cubes/O00_mirc_cube.png',
     'images/cubes/O01_premium_mirc_cube.png',
     'images/cubes/O02_golden_mirc_cube.png',
@@ -145,23 +154,13 @@ export const allCubes = [
     'images/cubes/O05_reflection_cube.png',
     'images/cubes/O06_selection_mirc_cube.png',
     'images/cubes/O07_platinum_mirc_cube.png',
-    'images/cubes/S00_hexa_cube.png',
-    'images/cubes/S01_equi_cube.png',
-    'images/cubes/S02_uni_cube.png',
-    'images/cubes/S03_absolute_acube.png',
-    'images/cubes/S04_field_acube.png',
-    'images/cubes/S05_hexa_cube.png',
-    'images/cubes/S06_equi_cube.png',
-    'images/cubes/S07_uni_cube.png',
-    'images/cubes/S08_equi_acube.png',
-    'images/cubes/S09_new_year_mirc_cube.png',
-    'images/cubes/S10_new_year_master_mirc_cube.png',
-    'images/cubes/S11_violet_cube.png',
-    'images/cubes/S12_uni_acube.png',
-    'images/cubes/T00_mysterious_cube.png',
-    'images/cubes/T01_restoration_cube.png',
-    'images/cubes/T02_precious_acube.png',
-    'images/cubes/T03_restoration_acube.png',
+    'images/cubes/O08_maple_mirc_cube.png',
+    'images/cubes/O09_fantasy_mirc_cube.png',
+    'images/cubes/B00_balrog_cube.png',
+    'images/cubes/B01_zakum_cube.png',
+    'images/cubes/B02_horntail_cube.png',
+    'images/cubes/B03_pinkbean_cube.png',
+    'images/cubes/B04_cygnus_cube.png',
 ];
 
 export const tickerItems = [
