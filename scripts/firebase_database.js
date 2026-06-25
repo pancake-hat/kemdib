@@ -40,7 +40,7 @@ export function recordWin(cubeId, spinNumber) {
 totalCountRef.on('value', (snapshot) => {
     const currTotalCount = snapshot.val();
     lastTotalCount = currTotalCount;
-    const totalClicksElement = document.getElementById('slot-total-clicks');
+    const totalClicksElement = document.getElementById('slot-global-clicks');
     if (totalClicksElement) {
         blink($(totalClicksElement));
         totalClicksElement.textContent = currTotalCount !== null ? currTotalCount : 0;

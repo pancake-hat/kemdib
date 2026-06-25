@@ -1,13 +1,41 @@
-/* https://coolors.co/98d2eb-e1f2fe-272838-191a24-b2b1cf */
+/*
+   ==========================================================================
+   1. VARIABLES & FONTS
+   ==========================================================================
+*/
+
+:root {
+    /* Colors */
+    --primary: #98D2EB;
+    --secondary: #E1F2FE;
+    --accent: #B2B1CF;
+    --bg-main: #212330;
+    --bg-card: #272838;
+    --bg-darker: #191A24;
+    --ticker-yellow: #efef7c;
+    --shadow-dark: rgba(0, 0, 0, 0.5);
+
+    /* Layout */
+    --border-radius: 8px;
+    --max-width: 1200px;
+}
+
 @font-face {
     font-family: 'Maple';
     src: url("../fonts/Maplestory_Light.ttf") format("truetype");
 }
+
 @font-face {
     font-family: 'Maple';
     font-weight: bold;
     src: url("../fonts/Maplestory_Bold.ttf") format("truetype");
 }
+
+/*
+   ==========================================================================
+   2. BASE STYLES
+   ==========================================================================
+*/
 
 html, body {
     height: 100%;
@@ -18,142 +46,24 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centers all direct children horizontally */
-    background-color: #212330;
-    background-image: linear-gradient(to bottom, #191A24, #212330, #191A24);
+    align-items: center;
+    background-color: var(--bg-main);
+    background-image: linear-gradient(to bottom, var(--bg-darker), var(--bg-main), var(--bg-darker));
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     overflow-x: hidden;
 }
 
-/* unvisited link */
-a:link {
-    color: white;
-}
-
-/* visited link */
-a:visited {
-    color: #97b5de;
-}
-
-/* mouse over link */
-a:hover {
-    color: hotpink;
-}
+a:link { color: white; }
+a:visited { color: #97b5de; }
+a:hover { color: hotpink; }
 
 h1 {
     font-family: Maple;
-    color: #98D2EB;
+    color: var(--primary);
     text-align: center;
-    margin: 100px 0 30px 0; /* Clear the top ticker */
+    margin: 100px 0 30px 0; /* Clear fixed ticker */
     width: 100%;
-}
-
-.game-layout {
-    display: grid;
-    /* 3-column grid: Left (Wins), Center (Slots), Right (Regions) */
-    grid-template-columns: 1fr auto 1fr;
-    align-items: center;
-    width: 100%;
-    margin: 0 auto;
-    position: relative;
-}
-
-.slots-container {
-    grid-column: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.recent-wins-container {
-    grid-column: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end; /* Align towards the center slots */
-    align-self: start; /* Align to the top of the grid row */
-    padding-right: 40px;
-    padding-top: 50px;
-    font-family: Maple;
-}
-
-.recent-wins-container h3 {
-    color: #98D2EB;
-    margin-bottom: 15px;
-    font-size: 20px;
-}
-
-#wins-list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    text-align: right;
-}
-
-.win-item {
-    background: rgba(39, 40, 56, 0.7);
-    padding: 10px 15px;
-    border-radius: 6px;
-    border-right: 4px solid #98D2EB;
-    color: #E1F2FE;
-    font-size: 14px;
-    animation: slideIn 0.3s ease-out;
-}
-
-@keyframes slideIn {
-    from { opacity: 0; transform: translateX(-20px); }
-    to { opacity: 1; transform: translateX(0); }
-}
-
-.region-select-container {
-    grid-column: 3;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-left: 40px;
-    gap: 12px;
-}
-
-.region-button {
-    font-family: Maple;
-    width: 140px;
-    padding: 12px;
-    font-size: 16px;
-    color: #E1F2FE;
-    background-color: #272838;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    position: relative;
-    box-shadow: 0 6px 0 #191a24;
-    transition: all 0.1s;
-    outline: none;
-}
-
-.region-button:hover {
-    background-color: #2f3144;
-}
-
-.region-button:active {
-    box-shadow: 0 2px 0 #191a24;
-    transform: translateY(4px);
-}
-
-.region-button.selected {
-    background-color: #98D2EB;
-    color: #191A24;
-    box-shadow: 0 6px 0 #6a8eae;
-}
-
-.region-button.selected:active {
-    box-shadow: 0 2px 0 #6a8eae;
-    transform: translateY(4px);
-}
-
-.region-button:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-    pointer-events: none;
 }
 
 footer {
@@ -162,16 +72,29 @@ footer {
     padding: 20px 0;
 }
 
-/* ... existing ticker/slot/modal animations ... */
+/*
+   ==========================================================================
+   3. LAYOUT
+   ==========================================================================
+*/
 
-@-webkit-keyframes ticker {
-    0% { transform: translate3d(0, 0, 0); visibility: visible; }
-    100% { transform: translate3d(-100%, 0, 0); }
+.game-layout {
+    display: grid;
+    /* 3-column grid: Left (Wins), Center (Slots), Right (Regions) */
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    position: relative;
 }
-@keyframes ticker {
-    0% { transform: translate3d(0, 0, 0); visibility: visible; }
-    100% { transform: translate3d(-100%, 0, 0); }
-}
+
+/*
+   ==========================================================================
+   4. COMPONENT: TICKER
+   ==========================================================================
+*/
+
 .ticker-wrap {
     position: fixed;
     top: 0;
@@ -192,22 +115,76 @@ footer {
     padding-right: 100%;
     animation: ticker 170s linear infinite;
 }
+
 .ticker_item {
     display: inline-block;
     padding: 0 2rem;
     font-family: Arial;
     font-size: 1rem;
-    color: #efef7c;
+    color: var(--ticker-yellow);
 }
 
 .ticker_close {
     color: white;
     position: fixed;
-    top: 0rem;
+    top: 0;
     left: 0.5rem;
     font-size: 30px;
     font-weight: bold;
     z-index: 100;
+}
+
+/*
+   ==========================================================================
+   5. COMPONENT: RECENT WINS
+   ==========================================================================
+*/
+
+.recent-wins-container {
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    align-self: start;
+    padding-right: 40px;
+    padding-top: 50px;
+    font-family: Maple;
+}
+
+.recent-wins-container h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+#wins-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: right;
+}
+
+.win-item {
+    background: rgba(39, 40, 56, 0.7);
+    padding: 10px 15px;
+    border-radius: 6px;
+    border-right: 4px solid var(--primary);
+    color: var(--secondary);
+    font-size: 14px;
+    animation: slideIn 0.3s ease-out;
+}
+
+/*
+   ==========================================================================
+   6. COMPONENT: SLOT MACHINE
+   ==========================================================================
+*/
+
+.slots-container {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #slots {
@@ -215,12 +192,12 @@ footer {
     margin: 20px auto;
     padding: 20px;
     overflow: hidden;
-    background: #272838;
+    background: var(--bg-card);
     border-radius: 10px;
     position: relative;
 }
 
-/* Thin red line in the center of slots */
+/* Center line indicator */
 #slots::after {
     content: "";
     position: absolute;
@@ -266,6 +243,7 @@ footer {
     top: -3805px;
 }
 
+/* Spin Button Container */
 #wrapp {
     grid-column: 2;
     width: 100%;
@@ -282,36 +260,13 @@ button#click-button {
     border-radius: 50%;
     user-select: none;
     cursor: pointer;
-    background-color: #191A24;
+    background-color: var(--bg-darker);
     border: none;
     outline: none;
 }
 
-.spin {
-    animation: spin 700ms cubic-bezier(.39,-0.24,.51,1.32) infinite;
-}
-
-@keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
-.win {
-    animation: win 200ms steps(2, end) infinite;
-}
-
-@keyframes win {
-    0% {
-        background: linear-gradient(45deg, #d1faff 0%, #9bd1e5 100%);
-        box-shadow: 0 0 80px #9bd1e5
-    }
-    100% {
-        background: linear-gradient(45deg, #6a8eae 0%, #272838 100%);
-        box-shadow: -2px 2px 3px #272838;
-    }
-}
-
-#slot-display, #slot-display-counter {
+/* Digital Displays */
+#slot-display-local-counter, #slot-display-global-counter {
     background: linear-gradient(to bottom, #1b1b1b 0%, #383838 8%, #3a3a3a 20%, #0a0a0a 47%, #010101 50%, #0d0d0d 54%, #444444 100%);
     border-radius: 6px;
     box-sizing: border-box;
@@ -322,8 +277,8 @@ button#click-button {
     margin: 0 auto;
 }
 
-#slot-display {
-    border: 2px solid #B2B1CF;
+#slot-display-local-counter {
+    border: 2px solid var(--accent);
     height: 30px;
     width: 200px;
     letter-spacing: 3px;
@@ -331,8 +286,8 @@ button#click-button {
     font-size: 22px;
 }
 
-#slot-display-counter {
-    border: 3px solid #E1F2FE;
+#slot-display-global-counter {
+    border: 5px solid var(--bg-card);
     height: 45px;
     width: 350px;
     letter-spacing: 3px;
@@ -340,14 +295,24 @@ button#click-button {
     font-size: 40px;
 }
 
-#slot-display div { position: absolute; right: 4px; top: 1px; }
-#slot-display-counter div { position: absolute; right: 5px; top: 6px; }
+#slot-display-local-counter div { position: absolute; right: 4px; top: 1px; }
+#slot-display-global-counter div { position: absolute; right: 5px; top: 6px; }
 
-#slot-curr-clicks { color: #B2B1CF; font-weight: bold; z-index: 2; }
-#slot-total-clicks { color: #E1F2FE; font-weight: bold; z-index: 2; }
+#slot-curr-clicks { color: var(--accent); font-weight: bold; z-index: 2; }
+#slot-global-clicks { color: var(--secondary); font-weight: bold; z-index: 2; }
 #slot-zeros { color: rgba(255, 255, 255, 0.3); z-index: 1; }
 
-#slot-overlay {
+#slot-display-global-counter-overlay {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.15) 40%, rgba(0, 0, 0, 0) 41%, rgba(0, 0, 0, 0) 100%);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+}
+
+#slot-display-local-counter-overlay {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.15) 50%, rgba(0, 0, 0, 0) 51%, rgba(0, 0, 0, 0) 100%);
     height: 100%;
     left: 0;
@@ -357,7 +322,7 @@ button#click-button {
     z-index: 3;
 }
 
-#slot-counter-overlay-line, #slot-overlay-line {
+#slot-display-global-counter-overlay-line, #slot-display-local-counter-overlay-line {
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     left: 0;
     position: absolute;
@@ -365,10 +330,72 @@ button#click-button {
     width: 100%;
     z-index: 3;
 }
-#slot-counter-overlay-line { height: 38%; }
-#slot-overlay-line { height: 46%; }
+#slot-display-global-counter-overlay-line { height: 38%; }
+#slot-display-local-counter-overlay-line { height: 46%; }
 
-/* Modal Styles */
+/*
+   ==========================================================================
+   7. COMPONENT: REGION SELECTION
+   ==========================================================================
+*/
+
+.region-select-container {
+    grid-column: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 40px;
+    gap: 12px;
+}
+
+.region-button {
+    font-family: Maple;
+    width: 140px;
+    padding: 12px;
+    font-size: 16px;
+    color: var(--secondary);
+    background-color: var(--bg-card);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 6px 0 var(--bg-darker);
+    transition: all 0.1s;
+    outline: none;
+}
+
+.region-button:hover {
+    background-color: #2f3144;
+}
+
+.region-button:active {
+    box-shadow: 0 2px 0 var(--bg-darker);
+    transform: translateY(4px);
+}
+
+.region-button.selected {
+    background-color: var(--primary);
+    color: var(--bg-darker);
+    box-shadow: 0 6px 0 #6a8eae;
+}
+
+.region-button.selected:active {
+    box-shadow: 0 2px 0 #6a8eae;
+    transform: translateY(4px);
+}
+
+.region-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/*
+   ==========================================================================
+   8. COMPONENT: MODAL
+   ==========================================================================
+*/
+
 .modal {
     display: none;
     position: fixed;
@@ -383,21 +410,21 @@ button#click-button {
 }
 
 .modal-content {
-    background-color: #272838;
-    color: #E1F2FE;
+    background-color: var(--bg-card);
+    color: var(--secondary);
     font-family: Maple;
     position: relative;
     padding: 30px;
-    border: 2px solid #98D2EB;
+    border: 2px solid var(--primary);
     border-radius: 12px;
     width: 500px;
     text-align: center;
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    box-shadow: 0 0 20px var(--shadow-dark);
 }
 
 .modal-content h2 {
     margin-top: 0;
-    color: #98D2EB;
+    color: var(--primary);
     font-size: 32px;
 }
 
@@ -408,7 +435,7 @@ button#click-button {
 }
 
 .close-modal {
-    color: #98D2EB;
+    color: var(--primary);
     position: absolute;
     right: 15px;
     top: 10px;
@@ -421,7 +448,52 @@ button#click-button {
     color: white;
 }
 
-/* Mobile Responsive Adjustments */
+/*
+   ==========================================================================
+   9. ANIMATIONS
+   ==========================================================================
+*/
+
+@keyframes ticker {
+    0% { transform: translate3d(0, 0, 0); visibility: visible; }
+    100% { transform: translate3d(-100%, 0, 0); }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes win {
+    0% {
+        background: linear-gradient(45deg, #d1faff 0%, #9bd1e5 100%);
+        box-shadow: 0 0 80px #9bd1e5;
+    }
+    100% {
+        background: linear-gradient(45deg, #6a8eae 0%, var(--bg-card) 100%);
+        box-shadow: -2px 2px 3px var(--bg-card);
+    }
+}
+
+.spin {
+    animation: spin 700ms cubic-bezier(.39,-0.24,.51,1.32) infinite;
+}
+
+.win {
+    animation: win 200ms steps(2, end) infinite;
+}
+
+/*
+   ==========================================================================
+   10. MEDIA QUERIES
+   ==========================================================================
+*/
+
 @media (max-width: 1024px) {
     h1 {
         margin-top: 80px;
@@ -441,9 +513,6 @@ button#click-button {
     .slots-container {
         order: 1;
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
     }
 
     #wrapp {
@@ -477,16 +546,11 @@ button#click-button {
 
     .win-item {
         border-right: none;
-        border-left: 4px solid #98D2EB;
+        border-left: 4px solid var(--primary);
     }
 
     .modal-content {
         width: 90%;
-    }
-
-    .modal-content img {
-        max-width: 100%;
-        height: auto;
     }
 }
 
