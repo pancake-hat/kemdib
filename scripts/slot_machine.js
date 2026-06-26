@@ -10,7 +10,6 @@ import {
     cmsSlotItems,
     tmsSlotItems,
     jmsSlotItems,
-    lmaoSlotItems,
     debugSlotItems,
 } from "./constants.js";
 
@@ -91,8 +90,6 @@ function getRegionSet(region) {
             return jmsSlotItems;
         case Region.TMS:
             return tmsSlotItems;
-        case Region.LMAO:
-            return lmaoSlotItems;
         case Region.DEBUG:
             return debugSlotItems;
         case Region.MSEA:

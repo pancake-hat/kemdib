@@ -81,15 +81,6 @@ export const p2wSlotItems = [
     'images/cubes/S08_uni_cube.png'
 ]
 
-export const lmaoSlotItems = [
-    'images/cubes/B00_balrog_cube.png',
-    'images/cubes/B01_zakum_cube.png',
-    'images/cubes/B02_horntail_cube.png',
-    'images/cubes/B03_pinkbean_cube.png',
-    'images/cubes/B04_cygnus_cube.png',
-    'images/cubes/C22_strange_fcube.png'
-]
-
 export const allCubes = [
     'images/cubes/A00_sus_cube.png',
     'images/cubes/A01_yellow_cube.png',
