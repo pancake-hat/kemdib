@@ -32,8 +32,8 @@ export const gmsSlotItems = [
     'images/cubes/G11_solid_cube.png',
     'images/cubes/G12_glowing_cube.png',
     'images/cubes/G13_bright_cube.png',
-    'images/cubes/G14_glowing_acube.png',
-    'images/cubes/G15_bright_acube.png'
+    'images/cubes/G15_glowing_acube.png',
+    'images/cubes/G16_bright_acube.png'
 ];
 
 export const kmsSlotItems = [
@@ -111,10 +111,10 @@ export const allCubes = [
     'images/cubes/G11_solid_cube.png',
     'images/cubes/G12_glowing_cube.png',
     'images/cubes/G13_bright_cube.png',
-    'images/cubes/G14_glowing_acube.png',
-    'images/cubes/G15_bright_acube.png',
-    'images/cubes/G20_mystical_acube.png',
-    'images/cubes/G21_hermes_cube.png',
+    'images/cubes/G14_mystical_acube.png',
+    'images/cubes/G15_glowing_acube.png',
+    'images/cubes/G16_bright_acube.png',
+    'images/cubes/G20_hermes_cube.png',
     'images/cubes/J00_memorial_cube.png',
     'images/cubes/J01_master_mirc_acube.png',
     'images/cubes/J10_neo_cube.png',
