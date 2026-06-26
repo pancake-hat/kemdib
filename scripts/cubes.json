@@ -1,0 +1,562 @@
+[
+  {
+    "id": "A00",
+    "name": "Suspicious Cube",
+    "effect": "",
+    "highestTier": "Epic",
+    "regions": ["kms", "msea", "jms"],
+    "imagePath": "images/cubes/A00_sus_cube.png"
+  },
+  {
+    "id": "A01",
+    "name": "Yellow Cube",
+    "effect": "",
+    "highestTier": "Unique",
+    "regions": ["kms", "msea", "jms"],
+    "imagePath": "images/cubes/A01_yellow_cube.png"
+  },
+  {
+    "id": "A02",
+    "name": "Purple Cube",
+    "effect": "",
+    "highestTier": "Legendary",
+    "regions": ["kms", "msea", "jms"],
+    "imagePath": "images/cubes/A02_purple_cube.png"
+  },
+  {
+    "id": "A03",
+    "name": "Red Cube",
+    "effect": "",
+    "highestTier": "Legendary",
+    "regions": ["kms"],
+    "imagePath": "images/cubes/A03_red_cube.png"
+  },
+  {
+    "id": "A04",
+    "name": "Black Cube",
+    "effect": "Able to choose the potential Before or After.",
+    "highestTier": "Legendary",
+    "regions": ["kms"],
+    "imagePath": "images/cubes/A04_black_cube.png"
+  },
+  {
+    "id": "A05",
+    "name": "Suspicious Additional Cube",
+    "effect": "",
+    "highestTier": "Epic",
+    "regions": ["kms", "msea"],
+    "imagePath": "images/cubes/A05_sus_acube.png"
+  },
+  {
+    "id": "A06",
+    "name": "Green Additional Cube",
+    "effect": "",
+    "highestTier": "Legendary",
+    "regions": ["kms"],
+    "imagePath": "images/cubes/A06_green_acube.png"
+  },
+  {
+    "id": "A07",
+    "name": "White Additional Cube",
+    "effect": "Able to choose the potential Before or After.",
+    "highestTier": "Legendary",
+    "regions": ["kms"],
+    "imagePath": "images/cubes/A07_white_acube.png"
+  },
+  {
+    "id": "A11",
+    "name": "Silver Cube",
+    "effect": "Able to choose the potential Before or After.",
+    "highestTier": "Unique",
+    "regions": ["kms"],
+    "imagePath": "images/cubes/A11_silver_cube.png"
+  },
+  {
+    "id": "A12",
+    "name": "Gold Cube",
+    "effect": "Able to choose the potential Before or After.",
+    "highestTier": "Legendary",
+    "regions": ["kms"],
+    "imagePath": "images/cubes/A12_gold_cube.png"
+  },
+  {
+    "id": "A10",
+    "name": "Bronze Additional Cube",
+    "effect": "Able to choose the potential Before or After.",
+    "highestTier": "Epic",
+    "regions": ["kms"],
+    "imagePath": "images/cubes/A10_bronze_acube.png"
+  },
+  {
+    "id": "M10",
+    "name": "Regular Cube",
+    "effect": "",
+    "highestTier": "Legendary",
+    "regions": ["msea"],
+    "imagePath": "images/cubes/M10_reg_cube.png"
+  },
+  {
+    "id": "M11",
+    "name": "Choice Cube",
+    "effect": "Able to choose the potential Before or After.",
+    "highestTier": "Legendary",
+    "regions": ["msea"],
+    "imagePath": "images/cubes/M11_choice_cube.png"
+  },
+  {
+    "id": "M12",
+    "name": "Regular Additional Cube",
+    "effect": "",
+    "highestTier": "Legendary",
+    "regions": ["msea"],
+    "imagePath": "images/cubes/M12_reg_acube.png"
+  },
+  {
+    "id": "M13",
+    "name": "Choice Additional Cube",
+    "effect": "Able to choose the potential Before or After.",
+    "highestTier": "Legendary",
+    "regions": ["msea"],
+    "imagePath": "images/cubes/M13_choice_acube.png"
+  },
+  {
+    "id": "G00",
+    "name": "Mystical Cube",
+    "effect": "",
+    "highestTier": "Epic",
+    "regions": ["gms"],
+    "imagePath": "images/cubes/G00_mystical_cube.png"
+  },
+  {
+    "id": "G10",
+    "name": "Hard Cube",
+    "effect": "",
+    "highestTier": "Unique",
+    "regions": ["gms"],
+    "imagePath": "images/cubes/G10_hard_cube.png"
+  },
+  {
+    "id": "G11",
+    "name": "Solid Cube",
+    "effect": "",
+    "highestTier": "Legendary",
+    "regions": ["gms"],
+    "imagePath": "images/cubes/G11_solid_cube.png"
+  },
+  {
+    "id": "G12",
+    "name": "Glowing Cube",
+    "effect": "",
+    "highestTier": "Legendary",
+    "regions": ["gms"],
+    "imagePath": "images/cubes/G12_glowing_cube.png"
+  },
+  {
+    "id": "G13",
+    "name": "Bright Cube",
+    "effect": "Able to choose the potential Before or After.",
+    "highestTier": "Legendary",
+    "regions": ["gms"],
+    "imagePath": "images/cubes/G13_bright_cube.png"
+  },
+  {
+    "id": "G14",
+    "name": "Mystical Additional Cube",
+    "effect": "",
+    "highestTier": "Epic",
+    "regions": ["gms"],
+    "imagePath": "images/cubes/G14_mystical_acube.png"
+  },
+  {
+    "id": "G15",
+    "name": "Glowing Additional Cube",
+    "effect": "",
+    "highestTier": "Legendary",
+    "regions": ["gms"],
+    "imagePath": "images/cubes/G15_glowing_acube.png"
+  },
+  {
+    "id": "G16",
+    "name": "Bright Additional Cube",
+    "effect": "Able to choose the potential Before or After.",
+    "highestTier": "Legendary",
+    "regions": ["gms"],
+    "imagePath": "images/cubes/G16_bright_acube.png"
+  },
+  {
+    "id": "G20",
+    "name": "Hermes Cube",
+    "effect": "",
+    "highestTier": "Unique",
+    "regions": ["gms"],
+    "imagePath": "images/cubes/G20_hermes_cube.png"
+  },
+  {
+    "id": "J01",
+    "name": "Master Miracle Additional Cube",
+    "effect": "Able to choose the potential Before or After.",
+    "highestTier": "Legendary",
+    "regions": ["jms"],
+    "imagePath": "images/cubes/J01_master_mirc_acube.png"
+  },
+  {
+    "id": "J10",
+    "name": "Neo Cube",
+    "effect": "",
+    "highestTier": "Legendary",
+    "regions": ["jms"],
+    "imagePath": "images/cubes/J10_neo_cube.png"
+  },
+  {
+    "id": "J11",
+    "name": "Mega Cube",
+    "effect": "Able to choose the potential Before or After.",
+    "highestTier": "Legendary",
+    "regions": ["jms"],
+    "imagePath": "images/cubes/J11_mega_cube.png"
+  },
+  {
+    "id": "J12",
+    "name": "Neo Additional Cube",
+    "effect": "",
+    "highestTier": "Legendary",
+    "regions": ["jms"],
+    "imagePath": "images/cubes/J12_neo_acube.png"
+  },
+  {
+    "id": "J13",
+    "name": "Mega Additional Cube",
+    "effect": "Able to choose the potential Before or After.",
+    "highestTier": "Legendary",
+    "regions": ["jms"],
+    "imagePath": "images/cubes/J13_mega_acube.png"
+  },
+  {
+    "id": "C00",
+    "name": "Root Cube",
+    "effect": "",
+    "highestTier": "Unique",
+    "regions": ["cms"],
+    "imagePath": "images/cubes/C00_root_cube.png"
+  },
+  {
+    "id": "C01",
+    "name": "Deep Root Cube",
+    "effect": "Chance to upgrade all lines to the highest current tier",
+    "highestTier": "Legendary",
+    "regions": ["cms"],
+    "imagePath": "images/cubes/C01_deep_root_cube.png"
+  },
+  {
+    "id": "C10",
+    "name": "Beyond Cube",
+    "effect": "",
+    "highestTier": "Legendary",
+    "regions": ["cms"],
+    "imagePath": "images/cubes/C10_beyond_cube.png"
+  },
+  {
+    "id": "C11",
+    "name": "Excellence Cube",
+    "effect": "Able to choose the potential Before or After.",
+    "highestTier": "Legendary",
+    "regions": ["cms"],
+    "imagePath": "images/cubes/C11_excellence_cube.png"
+  },
+  {
+    "id": "C12",
+    "name": "Beyond Additional Cube",
+    "effect": "",
+    "highestTier": "Legendary",
+    "regions": ["cms"],
+    "imagePath": "images/cubes/C12_beyond_acube.png"
+  },
+  {
+    "id": "C13",
+    "name": "Excellence Additional Cube",
+    "effect": "Able to choose the potential Before or After.",
+    "highestTier": "Legendary",
+    "regions": ["cms"],
+    "imagePath": "images/cubes/C13_excellence_acube.png"
+  },
+  {
+    "id": "C20",
+    "name": "Alien Nebula Cube",
+    "effect": "",
+    "highestTier": "Legendary",
+    "regions": ["gms", "cms"],
+    "imagePath": "images/cubes/C20_alien_ncube.png"
+  },
+  {
+    "id": "C22",
+    "name": "Strange Familiar Cube",
+    "effect": "Resets the potential of a Familiar cards only.",
+    "highestTier": "Legendary",
+    "regions": ["cms"],
+    "imagePath": "images/cubes/C22_strange_fcube.png"
+  },
+  {
+    "id": "T00",
+    "name": "Mysterious Cube",
+    "effect": "",
+    "highestTier": "Epic",
+    "regions": ["tms"],
+    "imagePath": "images/cubes/T00_mysterious_cube.png"
+  },
+  {
+    "id": "T01",
+    "name": "Restoration Cube",
+    "effect": "",
+    "highestTier": "Legendary",
+    "regions": ["tms"],
+    "imagePath": "images/cubes/T01_restoration_cube.png"
+  },
+  {
+    "id": "T02",
+    "name": "Precious Additional Cube",
+    "effect": "",
+    "highestTier": "Legendary",
+    "regions": ["tms"],
+    "imagePath": "images/cubes/T02_precious_acube.png"
+  },
+  {
+    "id": "T03",
+    "name": "Restoration Additional Cube",
+    "effect": "",
+    "highestTier": "Legendary",
+    "regions": ["tms"],
+    "imagePath": "images/cubes/T03_restoration_acube.png"
+  },
+  {
+    "id": "S00",
+    "name": "Hexa Cube",
+    "effect": "Ability to select 3 lines out of 6 random potentials.",
+    "highestTier": "Legendary",
+    "regions": ["msea", "jms", "cms", "tms"],
+    "imagePath": "images/cubes/S00_hexa_cube.png"
+  },
+  {
+    "id": "S01",
+    "name": "Violet Cube",
+    "effect": "Ability to select 3 lines out of 6 random potentials.",
+    "highestTier": "Legendary",
+    "regions": ["gms"],
+    "imagePath": "images/cubes/S01_violet_cube.png"
+  },
+  {
+    "id": "S02",
+    "name": "Hexa Cube",
+    "effect": "Ability to select 3 lines out of 6 random potentials.",
+    "highestTier": "Legendary",
+    "regions": ["cms", "tms"],
+    "imagePath": "images/cubes/S02_hexa_cube.png"
+  },
+  {
+    "id": "S03",
+    "name": "Equality Cube",
+    "effect": "All potential lines are set to match the equipments current tier.",
+    "highestTier": "Legendary",
+    "regions": ["gms", "msea", "cms", "tms"],
+    "imagePath": "images/cubes/S03_equi_cube.png"
+  },
+  {
+    "id": "S04",
+    "name": "Equality Cube",
+    "effect": "All potential lines are set to match the equipments current tier.",
+    "highestTier": "Legendary",
+    "regions": ["cms", "tms"],
+    "imagePath": "images/cubes/S04_equi_cube.png"
+  },
+  {
+    "id": "S05",
+    "name": "Equality Additional Cube",
+    "effect": "Can only be used on Legendary tier items. All lines will match the equipments current tier. First 2 lines are guaranteed Legendary.",
+    "highestTier": "Legendary",
+    "regions": ["cms"],
+    "imagePath": "images/cubes/S05_equi_acube.png"
+  },
+  {
+    "id": "S06",
+    "name": "Uni Cube",
+    "effect": "Randomly selects 1 line and user decides on whether to change selected line.",
+    "highestTier": "Legendary",
+    "regions": ["gms", "msea", "jms", "cms", "tms"],
+    "imagePath": "images/cubes/S06_uni_cube.png"
+  },
+  {
+    "id": "S07",
+    "name": "Uni Additional Cube",
+    "effect": "Randomly selects 1 line and user decides on whether to change selected line.",
+    "highestTier": "Legendary",
+    "regions": ["cms", "msea"],
+    "imagePath": "images/cubes/S07_uni_acube.png"
+  },
+  {
+    "id": "S08",
+    "name": "Uni Cube",
+    "effect": "Randomly selects 1 line and choice on whether to change selected line.",
+    "highestTier": "Legendary",
+    "regions": ["tms"],
+    "imagePath": "images/cubes/S08_uni_cube.png"
+  },
+  {
+    "id": "S09",
+    "name": "Absolute Additional Cube",
+    "effect": "Can only be used on Legendary tier items. First 2 lines are guaranteed Legendary.",
+    "highestTier": "Legendary",
+    "regions": ["cms", "tms"],
+    "imagePath": "images/cubes/S09_absolute_acube.png"
+  },
+  {
+    "id": "S10",
+    "name": "Domain Additional Cube",
+    "effect": "Can only be used on Legendary tier items. Ability to select 3 lines out of 5 random potentials. Only 1st line can be prime, line 2 and 3 are lower tier",
+    "highestTier": "Legendary",
+    "regions": ["cms"],
+    "imagePath": "images/cubes/S10_field_acube.png"
+  },
+  {
+    "id": "S12",
+    "name": "New Year Miracle Cube",
+    "effect": "",
+    "highestTier": "Legendary",
+    "regions": ["jms"],
+    "imagePath": "images/cubes/S12_new_year_mirc_cube.png"
+  },
+  {
+    "id": "S13",
+    "name": "New Year Master Miracle Cube",
+    "effect": "",
+    "highestTier": "Legendary",
+    "regions": ["jms"],
+    "imagePath": "images/cubes/S13_new_year_master_mirc_cube.png"
+  },
+  {
+    "id": "O00",
+    "name": "Master Miracle Cube",
+    "effect": "",
+    "highestTier": "Legendary",
+    "regions": ["kms", "gms", "msea", "jms"],
+    "imagePath": "images/cubes/O00_mirc_cube.png"
+  },
+  {
+    "id": "O01",
+    "name": "Premium Miracle Cube",
+    "effect": "",
+    "highestTier": "Unique",
+    "regions": ["gms", "msea", "jms"],
+    "imagePath": "images/cubes/O01_premium_mirc_cube.png"
+  },
+  {
+    "id": "O02",
+    "name": "Golden Miracle Cube",
+    "effect": "",
+    "highestTier": "Unique",
+    "regions": ["gms", "msea"],
+    "imagePath": "images/cubes/O02_golden_mirc_cube.png"
+  },
+  {
+    "id": "O03",
+    "name": "Revolutionary Miracle Cube",
+    "effect": "If used on an item with 2 lines, chance for 3rd line to be added.",
+    "highestTier": "Legendary",
+    "regions": ["kms", "msea"],
+    "imagePath": "images/cubes/O03_revolutionary_mirc_cube.png"
+  },
+  {
+    "id": "O04",
+    "name": "Enlightening Miracle Cube",
+    "effect": "",
+    "highestTier": "Legendary",
+    "regions": ["kms", "msea"],
+    "imagePath": "images/cubes/O04_enlightening_mirc_cube.png"
+  },
+  {
+    "id": "O05",
+    "name": "Reflection Cube",
+    "effect": "Probability for first line being reflected in the second line is increased.",
+    "highestTier": "Legendary",
+    "regions": ["tms"],
+    "imagePath": "images/cubes/O05_reflection_cube.png"
+  },
+  {
+    "id": "O06",
+    "name": "Selection Miracle Cube",
+    "effect": "Can only be used on weapons and secondary weapons.\nObtain all 3 lines from the Option list. Option List auto refreshes every 20 mins or when Selection Miracle Cube Stone is used to instantly refresh.\nPotential tier is determined by 1st line, tier can upgrade or downgrade based on 1st line obtained.",
+    "highestTier": "Legendary",
+    "regions": ["msea"],
+    "imagePath": "images/cubes/O06_selection_mirc_cube.png"
+  },
+  {
+    "id": "O07",
+    "name": "Platinum Miracle Cube",
+    "effect": "",
+    "highestTier": "Legendary",
+    "regions": ["kms", "msea"],
+    "imagePath": "images/cubes/O07_platinum_mirc_cube.png"
+  },
+  {
+    "id": "O08",
+    "name": "Maple Miracle Cube",
+    "effect": "Can only be used on Maple 8th Anniversary Platinum equipment.",
+    "highestTier": "Legendary",
+    "regions": ["kms"],
+    "imagePath": "images/cubes/O08_maple_mirc_cube.png"
+  },
+  {
+    "id": "O09",
+    "name": "Fantasy Miracle Cube",
+    "effect": "Can only be used on Maple 9th Anniversary equipment.",
+    "highestTier": "Legendary",
+    "regions": ["kms"],
+    "imagePath": "images/cubes/O09_fantasy_mirc_cube.png"
+  },
+  {
+    "id": "O10",
+    "name": "Memorial Cube",
+    "effect": "Able to choose the potential Before or After.",
+    "highestTier": "Legendary",
+    "regions": ["kms", "jms"],
+    "imagePath": "images/cubes/O10_memorial_cube.png"
+  },
+  {
+    "id": "B00",
+    "name": "Balrog Cube",
+    "effect": "",
+    "highestTier": "Legendary",
+    "regions": ["kms"],
+    "imagePath": "images/cubes/B00_balrog_cube.png"
+  },
+  {
+    "id": "B01",
+    "name": "Zakum Cube",
+    "effect": "",
+    "highestTier": "Legendary",
+    "regions": ["kms"],
+    "imagePath": "images/cubes/B01_zakum_cube.png"
+  },
+  {
+    "id": "B02",
+    "name": "Horntail Cube",
+    "effect": "",
+    "highestTier": "Legendary",
+    "regions": ["kms"],
+    "imagePath": "images/cubes/B02_horntail_cube.png"
+  },
+  {
+    "id": "B03",
+    "name": "Pinkbean Cube",
+    "effect": "",
+    "highestTier": "Legendary",
+    "regions": ["kms"],
+    "imagePath": "images/cubes/B03_pinkbean_cube.png"
+  },
+  {
+    "id": "B04",
+    "name": "Cygnus Cube",
+    "effect": "",
+    "highestTier": "Legendary",
+    "regions": ["kms"],
+    "imagePath": "images/cubes/B04_cygnus_cube.png"
+  }
+]
