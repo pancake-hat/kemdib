@@ -192,6 +192,14 @@
     "imagePath": "images/cubes/G20_hermes_cube.png"
   },
   {
+    "id": "J00",
+    "name": "Golden Miracle Cube Plus",
+    "effect": "",
+    "highestTier": "Legendary",
+    "regions": ["jms"],
+    "imagePath": "images/cubes/J00_golden_mirc_cube_plus.png"
+  },
+  {
     "id": "J01",
     "name": "Master Miracle Additional Cube",
     "effect": "Able to choose the potential Before or After.",
@@ -280,6 +288,14 @@
     "imagePath": "images/cubes/C13_excellence_acube.png"
   },
   {
+    "id": "C14",
+    "name": "Suspicious Additional Cube",
+    "effect": "",
+    "highestTier": "Epic",
+    "regions": ["cms"],
+    "imagePath": "images/cubes/C14_sus_acube.png"
+  },
+  {
     "id": "C20",
     "name": "Alien Nebula Cube",
     "effect": "",
@@ -288,12 +304,28 @@
     "imagePath": "images/cubes/C20_alien_ncube.png"
   },
   {
-    "id": "C22",
+    "id": "C21",
     "name": "Strange Familiar Cube",
     "effect": "Resets the potential of a Familiar cards only.",
     "highestTier": "Legendary",
     "regions": ["cms"],
-    "imagePath": "images/cubes/C22_strange_fcube.png"
+    "imagePath": "images/cubes/C21_strange_fcube.png"
+  },
+  {
+    "id": "C22",
+    "name": "Strange Advanced Familiar Cube",
+    "effect": "Resets the potential of a Familiar cards only.",
+    "highestTier": "Legendary",
+    "regions": ["cms"],
+    "imagePath": "images/cubes/C22_strange_advanced_fcube.png"
+  },
+  {
+    "id": "C23",
+    "name": "Strange Choice Familiar Cube",
+    "effect": "Resets the potential of a Familiar cards only. Able to choose the potential Before or After.",
+    "highestTier": "Legendary",
+    "regions": ["cms"],
+    "imagePath": "images/cubes/C23_strange_choice_fcube.png"
   },
   {
     "id": "T00",
@@ -414,6 +446,14 @@
     "highestTier": "Legendary",
     "regions": ["cms"],
     "imagePath": "images/cubes/S10_field_acube.png"
+  },
+  {
+    "id": "S11",
+    "name": "New Year Neo Miracle Cube",
+    "effect": "",
+    "highestTier": "Legendary",
+    "regions": ["jms"],
+    "imagePath": "images/cubes/S11_new_year_neo_mirc_cube.png"
   },
   {
     "id": "S12",
