@@ -7,13 +7,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     const grid = document.getElementById('cubes-grid');
     if (!grid) return;
 
-    // Wait for the registry to be loaded from the JSON file
     const cubeRegistry = await cubeRegistryPromise;
-
-    // Create a Map for O(1) lookup by ID
     const cubeMap = new Map(cubeRegistry.map(cube => [cube.id, cube]));
 
-    // Create Tooltip Element
+    // tooltip element
     const tooltip = document.createElement('div');
     tooltip.className = 'cube-tooltip';
     tooltip.innerHTML = `
@@ -26,7 +23,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     `;
     document.body.appendChild(tooltip);
 
-    // Track the current card being hovered to emulate mouseenter/mouseleave logic
     let currentCard = null;
 
     /**
@@ -116,11 +112,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const regionsEl = document.getElementById('tooltip-regions');
 
         nameEl.textContent = cube.name;
-
-        // Construct the dynamic effect text
-        const baseEffect = `Resets the potential of equipment, up to ${cube.highestTier}.`;
-
-        // Use the base effect and append cube-specific effect if available
+        const baseEffect = `Resets the potential of an item, up to ${cube.highestTier}.`;
         if (cube.effect && cube.effect.trim() !== "") {
             effectEl.innerHTML = `${baseEffect} ${cube.effect}`;
         } else {

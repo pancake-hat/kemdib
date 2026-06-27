@@ -250,7 +250,7 @@
   {
     "id": "C01",
     "name": "Deep Root Cube",
-    "effect": "Chance to upgrade all lines to the highest current tier",
+    "effect": "Chance to upgrade all lines to the highest current tier.",
     "highestTier": "Legendary",
     "regions": ["cms"],
     "imagePath": "images/cubes/C01_deep_root_cube.png"
@@ -442,7 +442,7 @@
   {
     "id": "S10",
     "name": "Domain Additional Cube",
-    "effect": "Can only be used on Legendary tier items. Ability to select 3 lines out of 5 random potentials. Only 1st line can be prime, line 2 and 3 are lower tier",
+    "effect": "Can only be used on Legendary tier items. Ability to select 3 lines out of 5 random potentials. Only 1st line can be prime, line 2 and 3 are lower tier.",
     "highestTier": "Legendary",
     "regions": ["cms"],
     "imagePath": "images/cubes/S10_field_acube.png"
@@ -564,7 +564,7 @@
     "name": "Balrog Cube",
     "effect": "",
     "highestTier": "Legendary",
-    "regions": ["kms"],
+    "regions": ["idk"],
     "imagePath": "images/cubes/B00_balrog_cube.png"
   },
   {
@@ -572,7 +572,7 @@
     "name": "Zakum Cube",
     "effect": "",
     "highestTier": "Legendary",
-    "regions": ["kms"],
+    "regions": ["idk"],
     "imagePath": "images/cubes/B01_zakum_cube.png"
   },
   {
@@ -580,7 +580,7 @@
     "name": "Horntail Cube",
     "effect": "",
     "highestTier": "Legendary",
-    "regions": ["kms"],
+    "regions": ["idk"],
     "imagePath": "images/cubes/B02_horntail_cube.png"
   },
   {
@@ -588,7 +588,7 @@
     "name": "Pinkbean Cube",
     "effect": "",
     "highestTier": "Legendary",
-    "regions": ["kms"],
+    "regions": ["idk"],
     "imagePath": "images/cubes/B03_pinkbean_cube.png"
   },
   {
@@ -596,7 +596,7 @@
     "name": "Cygnus Cube",
     "effect": "",
     "highestTier": "Legendary",
-    "regions": ["kms"],
+    "regions": ["idk"],
     "imagePath": "images/cubes/B04_cygnus_cube.png"
   }
 ]
