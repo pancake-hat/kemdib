@@ -542,7 +542,8 @@ button#click-button {
     box-shadow: 0 10px 30px rgba(0,0,0,0.8);
     display: none;
     min-width: 200px;
-    max-width: 250px;
+    max-width: 500px;
+    box-sizing: border-box;
 }
 
 .tooltip-name {
@@ -694,6 +695,10 @@ button#click-button {
     .cubes-grid {
         grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
         padding: 20px;
+    }
+
+    .cube-tooltip {
+        max-width: calc(100vw - 30px);
     }
 }
 

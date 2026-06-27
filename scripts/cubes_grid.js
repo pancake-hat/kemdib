@@ -139,21 +139,39 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     /**
-     * Positions the tooltip near the cursor
+     * Positions the tooltip near the cursor with clamping to viewport
      */
     function moveTooltip(e) {
         const padding = 15;
-        let x = e.clientX + padding;
-        let y = e.clientY + padding;
+        const maxTooltipWidth = 500;
+
+        // Use clientWidth/Height to exclude scrollbars for accurate uniform padding
+        const viewportWidth = document.documentElement.clientWidth;
+        const viewportHeight = document.documentElement.clientHeight;
+
+        // Dynamically cap the tooltip width to ensure uniform padding on both sides
+        tooltip.style.maxWidth = `${Math.min(maxTooltipWidth, viewportWidth - (padding * 2))}px`;
 
         const tooltipRect = tooltip.getBoundingClientRect();
 
-        if (x + tooltipRect.width > window.innerWidth) {
+        let x = e.clientX + padding;
+        let y = e.clientY + padding;
+
+        // If it goes off the right edge, flip it to the left side of the cursor
+        if (x + tooltipRect.width > viewportWidth - padding) {
             x = e.clientX - tooltipRect.width - padding;
         }
-        if (y + tooltipRect.height > window.innerHeight) {
+
+        // Clamp to left/right boundaries to ensure uniform padding
+        x = Math.max(padding, Math.min(x, viewportWidth - tooltipRect.width - padding));
+
+        // If it goes off the bottom edge, flip it above the cursor
+        if (y + tooltipRect.height > viewportHeight - padding) {
             y = e.clientY - tooltipRect.height - padding;
         }
+
+        // Clamp to top/bottom boundaries
+        y = Math.max(padding, Math.min(y, viewportHeight - tooltipRect.height - padding));
 
         tooltip.style.left = `${x}px`;
         tooltip.style.top = `${y}px`;
